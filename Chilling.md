@@ -80,6 +80,23 @@ Now we have 0x12 as we thought so it seems true. Do some code to get the true in
 
 ### K3yg3nm3
 
+**Method 3: Easy_UnpackMe**
+
+This is kinda simpler problem than I thought. Run for the first try, notice that it directly jump to the location: 00401150.
+<p align="center">
+  
+<img src="https://github.com/heluhule/Write-Up-for-reversing.kr/assets/148317962/b95789a0-2da0-4351-8e75-56f779620d16" alt="image" width="500"> 
+</p>
+
+Submit the number and it is true:
+
+<p align="center">
+  
+<img src="https://github.com/heluhule/Write-Up-for-reversing.kr/assets/148317962/dfcfb5be-52da-4037-ae04-7a44004be59b" alt="image" width="500"> 
+</p>
+
+### 00401150
+
 
 
 
