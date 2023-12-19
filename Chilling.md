@@ -1,10 +1,11 @@
-# WriteUp for reversing.kr
+# WriteUp for everything I found interesting
 
 ## A short write up to note down what I learned.
 
 ### Tools used:
 1. X32dbg
 2. Ollydbg
+3. IDA
 
 
 ## Problem 1: Easy_Crack_Me
