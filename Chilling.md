@@ -119,10 +119,11 @@ Get the flow of the code so let see what is happening. After trying from 0 to 10
 
 Something pop up in my mind. The only parameter pushed while calling loc_404689 is changed, and the result the function is **mov byte ptr ds:[eax], 90**. At first I was stuck with pushing a hexa value into eax, but it seems not that. 90 is OP CODE for NOP here, which means the program is trying to overwrite some OP CODE to lead us to the flag. The only OP CODE should be overwritten is **loc_401071** since it denies us to reach the flag. So now, the problem is clear that we have to find out the suitable number to get **loc_401071**. Run some more, I found that the first parameter is like:
 <p align="center">
-**EAX = 0x601605D7 + 4 + Input** ---> **0x00401071 = 0x601605D7 + 4 + Input**
+<strong> EAX = 0x601605D7 + 4 + Input ---> 0x00401071 = 0x601605D7 + 4 + Input </strong>
 </p>
-Since we can input nothing but integer, make sure to add a 1 into **0x00401071** to get a positive value by overflow. Now the key is
+Since we can input nothing but integer, make sure to add a 1 into <strong>0x00401071</strong> to get a positive value by overflow. Now the key is
 <p align="center" >
-  **Input = 0x100401071 - 0x601605D7 - 4 = 2687109798**
+  <strong>Input = 0x100401071 - 0x601605D7 - 4 </strong>
 </p>
+###  2687109798
 
