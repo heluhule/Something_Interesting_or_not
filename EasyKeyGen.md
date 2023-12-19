@@ -49,8 +49,8 @@ After having copied the FirstSerial, it will be transfered to signed 32bit Hexa 
 <br>Serial changed for better vision
 </p>
 As I labeled in the debugger, overall the First Serial Checking will belike: 
-<p align="center"> (LastSerial)<sup>2</sup> + (SecondSerial)<sup>2</sup> = 65536 </p>
-<p align="center"> (FirstSerial)<sup>2</sup> + (ThirdSerial)<sup>2</sup> = 65536 </p>
+<p align="center"> 65535.998 < (LastSerial)<sup>2</sup> + (SecondSerial)<sup>2</sup> < 65536.002 </p>
+<p align="center"> 65535.998 < (FirstSerial)<sup>2</sup> + (ThirdSerial)<sup>2</sup> < 65536.002 </p>
 
 
 #### Note  These values are after divided by 1000000, and *Serial here should be float numbers.
