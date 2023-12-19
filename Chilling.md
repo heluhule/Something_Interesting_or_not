@@ -176,3 +176,31 @@ The problem here is what [40DE3E8] and [40DE3F0] are? Nevermind just check the a
 <img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/2b2af9a7-26df-47b9-8b8f-ef05ffcb7592" alt="Image 1" width="400">
   <br><strong>Helo, World!</strong>
 </p>
+
+Alright, last part is looking for [40DE3E8] and [40DE3F0]. Back to the IDA here is the only part working with these 2 values
+
+<p align="center">
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/5fd90e7a-0510-41c2-b84f-696752a587e3" alt="Image 1" width="400">
+</p>
+
+The code here is readable, first it set [40D410] is 0xFFFFFFFFh. Then loop through every character of the Name with the flow:
+ - Get the ASCII value of character.
+ - xor_result = ascii_value ^ [40D410]
+ - and_result = xor_result & 0x000000FF
+ - result_list[(and_result x 4)-4 : (and_result x 4)]
+ - nextSHR = [40D410] >> 8
+ - [40D410] = nextSHR ^ **combined_hex** 
+
+*Note **combined_hex** is to get the value numbers in the list of value of [40D000]. We can see this list in IDA.*
+
+After having the value of [40D410], it will divided into 2 parts which is higher and lower. And now it is done:
+ - [40DE3E8] =  int((higher_part % 8198) + 256)
+ - [40DE3F0] =  int((lower_part % 8198) + 256)
+
+It should be done now (If my code is true). Test it:
+<p align="center">
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/346670b7-f553-4f54-8f95-286f050a2d1e" alt="Image 1" width="600">
+</p>
+
+#### Surprisingly it is true
+
