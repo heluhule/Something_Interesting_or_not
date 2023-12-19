@@ -64,7 +64,7 @@ Ok now let me check my read again:
 
 Good now!
 <p align="center">
-<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/eaa04a3c-fc67-48ee-a49b-a301cda214f4" alt="Image 1" width="300">
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/eaa04a3c-fc67-48ee-a49b-a301cda214f4" alt="Image 1" width="500">
 </p>
 I label it all in the image so we can see the the algorithm to check the Second Serial is:
 <p align="center">
