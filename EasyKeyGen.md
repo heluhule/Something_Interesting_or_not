@@ -68,7 +68,7 @@ Good now!
 </p>
 I label it all in the image so we can see the the algorithm to check the Second Serial is:
 <p align="center">
-<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/5720ff91-243b-4a60-bc08-104e7711c5c0" alt="Image 1" width="300">
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/5720ff91-243b-4a60-bc08-104e7711c5c0" alt="Image 1" width="500">
 </p>
 The problem here is what [40DE3E8] and [40DE3F0] are? Nevermind just check the algorithm first (Get the [40DE3E8] and [40DE3F0] from debugger and calculation by hand to check)
 
