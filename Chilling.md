@@ -109,11 +109,26 @@ Another Keygen problem here. Let see what we have through IDA:
 
 </p>
 
-Ok so we have some simple things here. So it will get text by **GetDlgItemTextA()** then compare the length with 3 and 35 (23h) --> this must be the length restriction. As I understand, Name should be > 3 characters, and Serial must exactly 35 characters. What's more, we can see that it compares the character to "-" every 8 character, so I guess it can be the form of 32 Serial numbers with - every 8 ones: (########-########-########-########)
+Ok so we have some simple things here. So it will get text by **GetDlgItemTextA()** then compare the length with 3 and 35 (23h) --> this must be the length restriction. As I understand, Name should be > 3 characters, and Serial must exactly 35 characters. What's more, we can see that it compares the character to "-" every 8 character, so I guess it can be the form of 32 Serial numbers with - every 8 ones: 
 
-. Let me try:
+<p align="center">
+########-########-########-########
 
+</p>
+Let me try:
 
+<p align="center">
 
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/0f7172b5-e04c-4de1-a224-ee5002309df6" alt="Image 1" width="350">
+Wrong format since it is not 35 characters in Serial
+
+</p>
+
+<p align="center">
+
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/5f47261a-7e1e-4075-bc4c-2b25f045aefa" alt="Image 2" width="350">
+My read is true
+
+</p>
 
 
