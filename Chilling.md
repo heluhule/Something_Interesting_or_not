@@ -121,3 +121,8 @@ Something pop up in my mind. The only parameter pushed while calling loc_404689 
 <p align="center">
 **EAX = 0x601605D7 + 4 + Input** ---> **0x00401071 = 0x601605D7 + 4 + Input**
 </p>
+Since we can input nothing but integer, make sure to add a 1 into **0x00401071** to get a positive value by overflow. Now the key is
+<p align="center" >
+  **Input = 0x100401071 - 0x601605D7 - 4 = 2687109798**
+</p>
+
