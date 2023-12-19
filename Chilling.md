@@ -99,3 +99,25 @@ Submit the number and it is true:
 ### 00401150
 
 
+## Replace
+At first I was a little bit confusing since just do not know what to do. Throw it into IDA so I can see that there is "nothing" lead me to the flag, so I should find that nothing right?
+
+<p align="center">
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/dc69d4a6-b91c-42bd-8c13-91c7f1026cc8" alt="image" width="500"> 
+</p>
+
+Get the flow of the code so let see what is happening. After trying from 0 to 10, I have realized something here:
+<p align="center">
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/be5235c7-202d-4b68-b4c3-00a68a4f9e24" alt="image" width="500"> 
+  <br>Input = 0
+</p>
+
+<p align="center">
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/8ac1f6ab-33e8-4818-a6ee-0c690b2c52a0" alt="image" width="500"> 
+  <br>Input = 5
+</p>
+
+Something pop up in my mind. The only parameter pushed while calling loc_404689 is changed, and the result the function is **mov byte ptr ds:[eax], 90**. At first I was stuck with pushing a hexa value into eax, but it seems not that. 90 is OP CODE for NOP here, which means the program is trying to overwrite some OP CODE to lead us to the flag. The only OP CODE should be overwritten is **loc_401071** since it denies us to reach the flag. So now, the problem is clear that we have to find out the suitable number to get **loc_401071**. Run some more, I found that the first parameter is like:
+<p align="center">
+**EAX = 0x601605D7 + 4 + Input** ---> **0x00401071 = 0x601605D7 + 4 + Input**
+</p>
