@@ -125,5 +125,7 @@ Since we can input nothing but integer, make sure to add a 1 into <strong>0x0040
 <p align="center" >
   <strong>Input = 0x100401071 - 0x601605D7 - 4 </strong>
 </p>
-###  2687109798
+
+
+### 2687109798
 
