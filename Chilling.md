@@ -98,6 +98,20 @@ Submit the number and it is true:
 ### 00401150
 
 
+### EasyKeyGen3
+
+Another Keygen problem here. Let see what we have through IDA: 
+
+<p align="center">
+  
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/42fb8438-30f3-4349-bce0-d2713ffe0d75" alt="image" width="500"> 
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/fa568a31-f96a-4433-816c-5b206764fa74" alt="image" width="500"> 
+
+</p>
+
+Ok so we have some simple things here. So it will get text by **GetDlgItemTextA()** then compare the length with 3 and 35 (23h) --> this must be the length restriction. As I understand, Name should be > 3 characters, and Serial must exactly 35 characters. What's more, we can see that it compares the character to "-" every 8 character, so I guess it can be the form of 32 Serial numbers with - every 8 ones: (########-########-########-########)
+
+. Let me try:
 
 
 
