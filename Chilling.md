@@ -99,7 +99,7 @@ Submit the number and it is true:
 ### 00401150
 
 
-## Replace
+## Problem 4: Replace
 At first I was a little bit confusing since just do not know what to do. Throw it into IDA so I can see that there is "nothing" lead me to the flag, so I should find that nothing right?
 
 <p align="center">
@@ -128,4 +128,27 @@ Since we can input nothing but integer, make sure to add a 1 into <strong>0x0040
 
 
 ### 2687109798
+
+## Problem 5: Ransomeware
+The very first thing that I always do when working with a exe file is to throw it into CFF Explorer:
+<p align="center">
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/d9ad7b7c-6d9b-43b4-803a-db73329e073c" alt="image" width="500">   
+</p>
+We saw UPX pack here, then of course I unpacked it and then see its workflow through IDA:
+<p align="center">
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/c9075417-cb6e-48b8-aef9-32a5aa2e379a" alt="image" width="500">   
+</p>
+
+Slowly read the graph, the algorithm is kind of simple: **(Inputed_Key ^ character_of_file) ^ 0xFF = new_character_of_file**. So now the problem is just to find the fixed character in a file so that we can make sure the key is correct. In a PE format, there is a term that should always be there which is "This program cannot be run in DOS mode", so I target at this sentence and write a Python script to decrypt the Key:
+<p align="center">
+<img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/53e76c0e-f8c6-4333-a53d-acd7c8631339" alt="image" width="500">   
+  <br> (new_character_of_file ^ 0xFF) ^ character_of_file = Inputed_Key </br>
+</p>
+And what i got is letsplaychessletsplaychessletsplayches so I input the term letsplaychess into the app again. Now the file is a PE file, but I had to 
+change its extension so it can run normally. Execute the file.exe it show the flag: 
+
+### Colle System
+
+
+
 
