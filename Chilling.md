@@ -144,8 +144,8 @@ Slowly read the graph, the algorithm is kind of simple: **(Inputed_Key ^ charact
 <img src="https://github.com/heluhule/Something_Interesting_or_not/assets/148317962/53e76c0e-f8c6-4333-a53d-acd7c8631339" alt="image" width="500">   
   <br> (new_character_of_file ^ 0xFF) ^ character_of_file = Inputed_Key </br>
 </p>
-And what i got is letsplaychessletsplaychessletsplayches so I input the term letsplaychess into the app again. Now the file is a PE file, but I had to 
-change its extension so it can run normally. Execute the file.exe it show the flag: 
+
+And what i got is ***letsplaychessletsplaychessletsplayches***  so I input the term ***letsplaychess*** into the app again. Now the file is a PE file, but I had to change its extension so it can run normally. Execute the file.exe it show the flag: 
 
 ### Colle System
 
